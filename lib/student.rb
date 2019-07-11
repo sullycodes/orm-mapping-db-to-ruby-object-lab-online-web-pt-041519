@@ -16,11 +16,8 @@ class Student
             FROM students
           SQL
     DB[:conn].execute(sql).map do |row| 
-<<<<<<< HEAD
         self.new_from_db(row)
-=======
         self.new_from_db(id, name, grade)
->>>>>>> 178616c7bdad2a706475917117928d585ea576fb
       end
   end
 
