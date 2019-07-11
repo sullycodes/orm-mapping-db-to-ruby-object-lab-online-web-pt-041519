@@ -16,7 +16,11 @@ class Student
             FROM students
           SQL
     DB[:conn].execute(sql).map do |row| 
+<<<<<<< HEAD
         self.new_from_db(row)
+=======
+        self.new_from_db(id, name, grade)
+>>>>>>> 178616c7bdad2a706475917117928d585ea576fb
       end
   end
 
@@ -30,6 +34,7 @@ class Student
     DB[:conn].execute(sql, name).map do |row|
       self.new_from_db(row)
     end.first
+<<<<<<< HEAD
   end
   
   def self.all_students_in_grade_9 
@@ -52,6 +57,8 @@ class Student
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
     end
+=======
+>>>>>>> 178616c7bdad2a706475917117928d585ea576fb
   end
   
   def self.first_X_students_in_grade_10(x)
